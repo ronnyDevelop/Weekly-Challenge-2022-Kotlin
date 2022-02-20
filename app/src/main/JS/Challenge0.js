@@ -17,10 +17,16 @@
  *
  */
 
+//Obtengo el valor de la variable y compruebo si es divisible entre 3 o 5 o ambas
 for (let i = 1; i <= 100; i++){
-    if (i % 3 == 0){
-        console.log("fizz");
-    }else if(i % 5 == 0){
+    let divisibleByThree = i % 3 === 0;
+    let divisibleByFive = i % 5 === 0;
+//Evalúo y muestro en consola segun el resultado
+    if (divisibleByThree && divisibleByFive){
+        console.log("fizzbuzz");
+    }else if(divisibleByThree){
+        console.log("buzz");
+    }else if(divisibleByFive) {
         console.log("buzz");
     }else {
         console.log(i);
